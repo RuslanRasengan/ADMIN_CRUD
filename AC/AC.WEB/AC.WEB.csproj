@@ -4,4 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AC.BusinessLogic\AC.BusinessLogic.csproj" />
+    <ProjectReference Include="..\AC.Configuration\AC.Configuration.csproj" />
+    <ProjectReference Include="..\AC.ViewModels\AC.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>
