@@ -14,5 +14,6 @@ namespace AC.Entities
         public ProductType Type{ get; set; }
         public string VendorCode { get; set; }
         public bool OnMainPage { get; set; }
+        public virtual IEnumerable<Image> Images { get; set; }
     }
 }
