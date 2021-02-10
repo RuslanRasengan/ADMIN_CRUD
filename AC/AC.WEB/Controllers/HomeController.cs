@@ -23,7 +23,17 @@ namespace AC.WEB.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Catalog()
+        {
+            return View();
+        }
+
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Guarantee()
         {
             return View();
         }

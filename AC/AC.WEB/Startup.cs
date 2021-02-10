@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Rewrite;
 using AC.Configuration;
 
 namespace AC.WEB
@@ -37,6 +38,12 @@ namespace AC.WEB
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
+            var options = new RewriteOptions()
+                .AddRedirect("(.*)/$", "$1")
+                .AddRedirect("Home[/]?$", "home"); //redirect с home на home/index
+            app.UseRewriter(options);
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
