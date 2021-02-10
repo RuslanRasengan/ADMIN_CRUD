@@ -8,7 +8,9 @@ namespace AC.Configuration
     {
         public static IServiceCollection ConfigureDatabase(this IServiceCollection services, string connectionString)
         {
-            services.AddDbContext<AppContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<AppContext>(options =>
+                options.UseLazyLoadingProxies()
+                    .UseSqlServer(connectionString));
 
             return services;
         }
