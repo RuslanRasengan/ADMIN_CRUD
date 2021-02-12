@@ -10,7 +10,7 @@ namespace AC.Configuration
     {
         public static IServiceCollection ConfigureDependencyInjection(this IServiceCollection services)
         {
-            services.AddScoped<IProductService, ProductServices>();
+            //services.AddScoped<IProductService, ProductServices>();
 
             services.AddScoped<IProductRepository, ProductRepository>();
 
