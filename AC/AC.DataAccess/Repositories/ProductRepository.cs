@@ -1,4 +1,4 @@
-﻿using AC.DataAccess.Interfaces.Repositories;
+﻿using AC.Interfaces.DataAccess.Repositories;
 using AC.Entities;
 
 namespace AC.DataAccess.Repositories

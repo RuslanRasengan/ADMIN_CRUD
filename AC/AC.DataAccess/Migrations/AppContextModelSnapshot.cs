@@ -17,7 +17,7 @@ namespace AC.DataAccess.Migrations
             modelBuilder
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.2");
+                .HasAnnotation("ProductVersion", "5.0.3");
 
             modelBuilder.Entity("AC.Entities.Image", b =>
                 {
@@ -34,9 +34,6 @@ namespace AC.DataAccess.Migrations
 
                     b.Property<int?>("ProductId")
                         .HasColumnType("int");
-
-                    b.Property<string>("Src")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

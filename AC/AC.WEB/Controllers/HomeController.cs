@@ -1,19 +1,24 @@
 ﻿using AC.WEB.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
+using AC.Interfaces.BusinessLogic.Services;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace AC.WEB.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IProductService _productService;
+
+        public HomeController(IProductService productService)
         {
-            return View();
+            _productService = productService;
+        }
+        [HttpGet]
+        public async Task<IActionResult> Index()
+        {
+            var products = await _productService.GetProductsForMainPageAsync();
+            return View(products);
         }
 
         public IActionResult Catalog()

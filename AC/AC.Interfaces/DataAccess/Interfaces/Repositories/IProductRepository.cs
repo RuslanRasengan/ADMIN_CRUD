@@ -1,6 +1,6 @@
 ﻿using AC.Entities;
 
-namespace AC.DataAccess.Interfaces.Repositories
+namespace AC.Interfaces.DataAccess.Repositories
 {
     public interface IProductRepository : IBaseRepository<Product>
     {

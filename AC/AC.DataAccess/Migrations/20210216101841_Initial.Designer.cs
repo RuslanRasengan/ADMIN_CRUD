@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AC.DataAccess.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20210208174200_initial")]
-    partial class initial
+    [Migration("20210216101841_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,7 +19,7 @@ namespace AC.DataAccess.Migrations
             modelBuilder
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.2");
+                .HasAnnotation("ProductVersion", "5.0.3");
 
             modelBuilder.Entity("AC.Entities.Image", b =>
                 {
@@ -36,9 +36,6 @@ namespace AC.DataAccess.Migrations
 
                     b.Property<int?>("ProductId")
                         .HasColumnType("int");
-
-                    b.Property<string>("Src")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

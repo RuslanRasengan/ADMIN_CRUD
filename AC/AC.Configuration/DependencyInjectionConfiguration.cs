@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using AC.BusinessLogic.Services;
-using AC.BusinessLogic.Interfaces.Services;
-using AC.DataAccess.Interfaces.Repositories;
+using AC.Interfaces.BusinessLogic.Services;
+using AC.Interfaces.DataAccess.Repositories;
 using AC.DataAccess.Repositories;
 
 namespace AC.Configuration
@@ -10,7 +10,7 @@ namespace AC.Configuration
     {
         public static IServiceCollection ConfigureDependencyInjection(this IServiceCollection services)
         {
-            //services.AddScoped<IProductService, ProductServices>();
+            services.AddScoped<IProductService, ProductServices>();
 
             services.AddScoped<IProductRepository, ProductRepository>();
 

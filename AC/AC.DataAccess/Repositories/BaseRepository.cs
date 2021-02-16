@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using AC.Entities;
-using AC.DataAccess.Interfaces.Repositories;
+using AC.Interfaces.DataAccess.Repositories;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

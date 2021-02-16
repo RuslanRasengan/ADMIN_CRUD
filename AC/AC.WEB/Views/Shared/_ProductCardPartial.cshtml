@@ -1,16 +1,16 @@
+@model AC.ViewModels.Product.ProductCardViewModel
+
 <div class="card-container">
     <div class="border">
         <div class="wrap">
             <div class="product-wrap">
-                <a href="#">
-                    <img src="#">
-                </a>
+                <img src="~/images/products/@Model.Image" alt="Avatar" style="width:100%">
             </div>
             <div class="product-info">
                 <h2 class="product-title">
-                    наименование
+                    @Model.Name
                 </h2>
-                <div class="product-price">цена</div>
+                <div class="product-price">@Model.Price.ToString("0")</div>
             </div>
         </div>
     </div>
