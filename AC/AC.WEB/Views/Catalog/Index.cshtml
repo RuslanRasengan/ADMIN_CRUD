@@ -1,0 +1,17 @@
+﻿@model AC.ViewModels.PagedResult<AC.ViewModels.Product.ProductCardViewModel>
+
+@{
+    ViewData["Title"] = "Catalog";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Catalog</p>
+
+<div class="maincards-catalog">
+    @foreach (var product in Model.Collection)
+    {
+        @await Html.PartialAsync("_ProductCardPartial", product)
+    }
+
+    @(await Component.InvokeAsync<AC.WEB.ViewComponents.PagerViewComponent>(Model))
+</div>

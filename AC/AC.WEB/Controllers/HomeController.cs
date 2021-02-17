@@ -20,17 +20,12 @@ namespace AC.WEB.Controllers
             var products = await _productService.GetProductsForMainPageAsync();
             return View(products);
         }
-
-        public IActionResult Catalog()
-        {
-            return View();
-        }
-
+        [HttpGet]
         public IActionResult About()
         {
             return View();
         }
-
+        [HttpGet]
         public IActionResult Guarantee()
         {
             return View();

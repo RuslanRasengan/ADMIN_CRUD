@@ -11,13 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AC.WEB", "AC.WEB\AC.WEB.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AC.Admin", "AC.Admin\AC.Admin.csproj", "{DDB16DA9-6276-4885-A33D-03720C0534F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AC.BusinessLogic", "AC.BusinessLogic\AC.BusinessLogic.csproj", "{D153BCA6-AAB3-4C07-8340-5EF9392EFEBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AC.BusinessLogic", "AC.BusinessLogic\AC.BusinessLogic.csproj", "{D153BCA6-AAB3-4C07-8340-5EF9392EFEBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AC.Configuration", "AC.Configuration\AC.Configuration.csproj", "{BFEBF4DB-A43B-4D0D-B844-71BB28F88337}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AC.Configuration", "AC.Configuration\AC.Configuration.csproj", "{BFEBF4DB-A43B-4D0D-B844-71BB28F88337}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AC.ViewModels", "AC.ViewModels\AC.ViewModels.csproj", "{3A4B8E2C-B595-4761-8693-D5987D4C34B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AC.ViewModels", "AC.ViewModels\AC.ViewModels.csproj", "{3A4B8E2C-B595-4761-8693-D5987D4C34B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AC.Interfaces", "AC.Interfaces\AC.Interfaces.csproj", "{BF5593A3-FAC5-4D54-A557-E13A1800674B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AC.Interfaces", "AC.Interfaces\AC.Interfaces.csproj", "{BF5593A3-FAC5-4D54-A557-E13A1800674B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AC.Common", "AC.Common\AC.Common.csproj", "{40B72D83-FBE6-4431-9838-A2E9B10858D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{BF5593A3-FAC5-4D54-A557-E13A1800674B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF5593A3-FAC5-4D54-A557-E13A1800674B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF5593A3-FAC5-4D54-A557-E13A1800674B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40B72D83-FBE6-4431-9838-A2E9B10858D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B72D83-FBE6-4431-9838-A2E9B10858D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40B72D83-FBE6-4431-9838-A2E9B10858D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40B72D83-FBE6-4431-9838-A2E9B10858D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

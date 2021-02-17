@@ -42,6 +42,18 @@ namespace AC.WEB
                 app.UseHsts();
             }
 
+
+            app.Use(async (context, next) =>
+                {
+                    await next();
+                    if(context.Response.StatusCode == 404)
+                    {
+                        context.Request.Path = "/Error/NotFound";
+                        await next();
+                    }
+                });
+
+
             var options = new RewriteOptions()
                 .AddRedirect("(.*)/$", "$1")
                 .AddRedirect("Home[/]?$", "home"); //redirect с home на home/index
