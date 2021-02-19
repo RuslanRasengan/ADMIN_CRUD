@@ -1,18 +1,27 @@
 @model AC.ViewModels.Product.ProductCardViewModel
+@using AC.Common.Extensions;
 
-<div class="card-container">
+
+<div class="catacards">
     <div class="border">
         <div class="wrap">
             <div class="product-wrap">
-                <img src="~/images/products/@Model.Image" alt="Avatar" style="width:100%">
+                <a href=""><img src="~/images/products/@Model.Image"></a>
             </div>
-            <div class="product-info">
-                <h2 class="product-title">
-                    @Model.Name
-                </h2>
-                <div class="product-price">@Model.Price.ToString("0")</div>
-                <div class="product-price">@Model.OldPrice.ToString("0")</div>
+            <div class="loop-action">
+                <a href="javascript:void(0)" class="add-to-cart">Быстрый просмотр</a>
+                <a href="javascript:void(0)" class="loop-add-to-cart" onclick="location.href='@Url.Action(Model.Id.ToString(), "Catalog")'">Подробнее</a>
             </div>
+        </div>
+        <div class="product-info">
+            <div class="product-labels">
+                @if (Model.Type != AC.Entities.Enums.ProductType.None)
+                {
+                    <div class="product-type">@Model.Type.GetDescription()</div>
+                }
+            </div>
+            <h3 class="product-title">@Model.Name</h3>
+            <div class="price"> @Model.Price<s style="color: black;">@Model.OldPrice</s></div>
         </div>
     </div>
 </div>

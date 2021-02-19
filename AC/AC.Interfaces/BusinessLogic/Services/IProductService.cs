@@ -9,5 +9,6 @@ namespace AC.Interfaces.BusinessLogic.Services
     {
         Task<IEnumerable<ProductCardViewModel>> GetProductsForMainPageAsync();
         Task<PagedResult<ProductCardViewModel>> GetProductsForCatalogAsync(int page = 1);
+        Task<ProductDetailsViewModel> GetProductDetailsByIdAsync(int id);
     }
 }

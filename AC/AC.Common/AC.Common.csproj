@@ -6,9 +6,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.8.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AC.Interfaces\AC.Interfaces.csproj" />
     <ProjectReference Include="..\AC.ViewModels\AC.ViewModels.csproj" />
   </ItemGroup>
 

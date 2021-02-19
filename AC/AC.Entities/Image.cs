@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AC.Entities
+﻿namespace AC.Entities
 {
     public class Image : BaseEntity
     {
         public string Name { get; set; }
+        public int Order { get; set; }
         public virtual Product Product { get; set; }
     }
 }

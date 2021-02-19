@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.3" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AC.Entities\AC.Entities.csproj" />
     <ProjectReference Include="..\AC.ViewModels\AC.ViewModels.csproj" />
   </ItemGroup>

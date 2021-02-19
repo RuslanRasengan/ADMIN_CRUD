@@ -1,5 +1,4 @@
-﻿
-namespace AC.Entities
+﻿namespace AC.Entities
 {
     public class User
     {

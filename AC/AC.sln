@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AC.ViewModels", "AC.ViewMod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AC.Interfaces", "AC.Interfaces\AC.Interfaces.csproj", "{BF5593A3-FAC5-4D54-A557-E13A1800674B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AC.Common", "AC.Common\AC.Common.csproj", "{40B72D83-FBE6-4431-9838-A2E9B10858D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AC.Common", "AC.Common\AC.Common.csproj", "{40B72D83-FBE6-4431-9838-A2E9B10858D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AC.Integration", "AC.Integration\AC.Integration.csproj", "{29BE3AC2-1897-4014-84CC-A92D8A79FE82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{40B72D83-FBE6-4431-9838-A2E9B10858D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40B72D83-FBE6-4431-9838-A2E9B10858D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40B72D83-FBE6-4431-9838-A2E9B10858D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29BE3AC2-1897-4014-84CC-A92D8A79FE82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29BE3AC2-1897-4014-84CC-A92D8A79FE82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29BE3AC2-1897-4014-84CC-A92D8A79FE82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29BE3AC2-1897-4014-84CC-A92D8A79FE82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

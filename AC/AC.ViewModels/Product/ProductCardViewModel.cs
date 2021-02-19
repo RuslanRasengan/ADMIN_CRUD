@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using AC.Entities.Enums;
 
 namespace AC.ViewModels.Product
 {
@@ -10,6 +8,7 @@ namespace AC.ViewModels.Product
         public string Name { get; set; }
         public decimal OldPrice { get; set; }
         public decimal Price { get; set; }
+        public ProductType Type { get; set; }
         public string Image { get; set; }
     }
 }

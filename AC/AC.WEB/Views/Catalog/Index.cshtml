@@ -12,6 +12,8 @@
     {
         @await Html.PartialAsync("_ProductCardPartial", product)
     }
+</div>
 
+<div style="text-align:center">
     @(await Component.InvokeAsync<AC.WEB.ViewComponents.PagerViewComponent>(Model))
 </div>

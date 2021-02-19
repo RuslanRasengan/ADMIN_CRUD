@@ -1,5 +1,96 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model AC.ViewModels.Product.ProductDetailsViewModel
 @{
+    ViewData["Title"] = "Product";
 }
+
+<div class="product-container">
+
+    <span id="product-id" style="display:none">@Model.Id</span>
+
+    <div class="product-card">
+        <div class="picture w3-display-container">
+            <a href="~/images/products/product-123-123-123.jpg" rel="group-2" class="w3-hover-opacity" onclick="openImg(event);">
+                <img src="~/images/products/product-123-123-123.jpg" alt="Nature">
+            </a>
+        </div>
+
+        <div class="w3-row-padding">
+            <div class="w3-col s3 w3-container">
+                <a href="~/images/products/product-123-123-123.jpg" rel="group-1" class="w3-hover-opacity" onmouseover="openImg(event);">
+                    <img src="~/images/products/product-123-123-123.jpg" alt="Nature">
+                </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+                <a href="https://static-eu.insales.ru/images/products/1/770/319062786/img06-4.jpg" rel="group-1" class="w3-hover-opacity" onmouseover="openImg(event);">
+                    <img src="https://static-eu.insales.ru/images/products/1/770/319062786/img06-4.jpg" alt="Snow">
+                </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+                <a href="https://static-eu.insales.ru/images/products/1/771/319062787/img10-4.jpg" rel="group-1" class="w3-hover-opacity" onmouseover="openImg(event);">
+                    <img src="https://static-eu.insales.ru/images/products/1/771/319062787/img10-4.jpg" alt="Mountains">
+                </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+                <a href="https://static-eu.insales.ru/images/products/1/772/319062788/img15-4.jpg" rel="group-1" class="w3-hover-opacity" onmouseover="openImg(event);">
+                    <img src="https://static-eu.insales.ru/images/products/1/772/319062788/img15-4.jpg" alt="Lights">
+                </a>
+            </div>
+        </div><br>
+    </div>
+
+    <div class="arrange" style="width: 40%">
+        <div class="pricename">
+            <h1 class="h1block">@Model.Name</h1>
+            <p style="font-size: 0.8em">Артикул: @Model.VendorCode</p>
+            <p style="font-size: 1.4em;color: red">@Model.Price<s style="color: black;">@Model.OldPrice</s></p>
+        </div>
+
+        <div class="buttonsize">
+            <p style="font-weight: 600;">О наличии размеров уточняйте в (viber,telegram,watsapp) +7 495 555 55 55</p>
+            <p style="font-weight: 500;">Выберите размер</p>
+
+            @*TODO move to css file*@
+            <style>
+                .active {
+                    background-color: black;
+                    color: white;
+                    font-weight: 590;
+                }
+            </style>
+
+            <div class="divsize">
+                <button class="button active">36</button>
+                <button class="button">37</button>
+                <button class="button">38</button>
+                <button class="button">39</button>
+                <button class="button">40</button>
+                <button class="button">41</button>
+                <button class="button">42</button>
+                <button class="button">43</button>
+                <button class="button">44</button>
+                <button class="button">45</button>
+            </div>
+        </div>
+        <div class="addtocard">
+            <button class="button cartbutton" onclick="addProductToCart()">Добавить в корзину</button>
+        </div>
+    </div>
+    <div class="tabs-product">
+        <div class="w3-row" style="margin-top: 5%;">
+            <a href="javascript:void(0)" onclick="openCity(event, 'London');">
+                <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding w3-border-red">Подробно о товаре</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
+                <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Отзывы</div>
+            </a>
+        </div>
+        <div id="London" class="w3-container city">
+            <h2>London</h2>
+            <p>London is the capital city of England.</p>
+        </div>
+        <div id="Paris" class="w3-container city" style="display:none">
+            <h2>Paris</h2>
+            <p>Paris is the capital of France.</p>
+        </div>
+    </div>
+</div>

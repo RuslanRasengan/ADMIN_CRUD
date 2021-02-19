@@ -1,8 +1,5 @@
 ﻿using AC.Entities.Enums;
-using System;
 using System.Collections.Generic;
-using System.Text;
-
 namespace AC.Entities
 {
     public class Product : BaseEntity
@@ -14,6 +11,7 @@ namespace AC.Entities
         public ProductType Type{ get; set; }
         public string VendorCode { get; set; }
         public bool OnMainPage { get; set; }
+        public int Order { get; set; }
         public virtual IEnumerable<Image> Images { get; set; }
     }
 }

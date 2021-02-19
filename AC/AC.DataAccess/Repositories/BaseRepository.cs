@@ -31,9 +31,7 @@ namespace AC.DataAccess.Repositories
         public async Task<T> AddAsync(T entity)
         {
             var savedEntity = await _dbSet.AddAsync(entity);
-
             await _context.SaveChangesAsync();
-
             return savedEntity.Entity;
         }
 

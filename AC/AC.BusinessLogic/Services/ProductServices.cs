@@ -3,6 +3,7 @@ using AC.Common.Extensions;
 using AC.Interfaces.BusinessLogic.Services;
 using AC.Interfaces.DataAccess.Repositories;
 using AC.Entities;
+using AC.Entities.Enums;
 using AC.ViewModels;
 using AC.ViewModels.Product;
 using System.Collections.Generic;
@@ -25,17 +26,19 @@ namespace AC.BusinessLogic.Services
 
         public async Task<IEnumerable<ProductCardViewModel>> GetProductsForMainPageAsync()
         {
-            var products = await _productRepository
-               .GetAll()
-               .Where(x => x.OnMainPage)
-               .Select(x => new ProductCardViewModel
-               {
-                   Id = x.Id,
-                   Name = x.Name,
-                   OldPrice = x.OldPrice,
-                   Price = x.Price,
-                   Image = x.Images.FirstOrDefault().Name
-               }).ToListAsync();
+            var products = await _productRepository.GetAll()
+                .Where(x => x.OnMainPage)
+                .OrderBy(x => x.Order)
+                .Select(x => new ProductCardViewModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    OldPrice = x.OldPrice,
+                    Price = x.Price,
+                    Type = x.Type,
+                    Image = x.Images.FirstOrDefault().Name
+                })
+                .ToListAsync();
             return products;
         }
 
@@ -49,11 +52,29 @@ namespace AC.BusinessLogic.Services
                    Name = x.Name,
                    OldPrice = x.OldPrice,
                    Price = x.Price,
+                   Type = x.Type,
                    Image = x.Images.FirstOrDefault().Name
                })
                .GetPaged(page, PageSize);
 
             return products;
+        }
+
+        public async Task<ProductDetailsViewModel> GetProductDetailsByIdAsync(int id)
+        {
+            var product = await _productRepository.GetByIdAsync(id);
+
+            var productView = new ProductDetailsViewModel
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Description = product.Description,
+                OldPrice = product.OldPrice,
+                Price = product.Price,
+                VendorCode = product.VendorCode,
+                Images = product.Images.OrderBy(x => x.Order).Select(x => x.Name).ToList()
+            };
+            return productView;
         }
 
         private void Seed()

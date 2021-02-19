@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AC.Entities\AC.Entities.csproj" />
+    <ProjectReference Include="..\AC.Interfaces\AC.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

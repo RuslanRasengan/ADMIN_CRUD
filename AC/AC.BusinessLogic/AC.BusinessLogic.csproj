@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Syncfusion.XlsIO.Net.Core" Version="18.4.0.43" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AC.Common\AC.Common.csproj" />
     <ProjectReference Include="..\AC.DataAccess\AC.DataAccess.csproj" />
     <ProjectReference Include="..\AC.Entities\AC.Entities.csproj" />

@@ -12,7 +12,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AC.BusinessLogic\AC.BusinessLogic.csproj" />
+    <ProjectReference Include="..\AC.Common\AC.Common.csproj" />
     <ProjectReference Include="..\AC.DataAccess\AC.DataAccess.csproj" />
+    <ProjectReference Include="..\AC.Integration\AC.Integration.csproj" />
   </ItemGroup>
 
 </Project>

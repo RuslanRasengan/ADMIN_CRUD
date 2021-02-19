@@ -14,17 +14,20 @@ namespace AC.WEB.Controllers
         {
             _productService = productService;
         }
+
         [HttpGet]
         public async Task<IActionResult> Index()
         {
             var products = await _productService.GetProductsForMainPageAsync();
             return View(products);
         }
+
         [HttpGet]
         public IActionResult About()
         {
             return View();
         }
+
         [HttpGet]
         public IActionResult Guarantee()
         {
