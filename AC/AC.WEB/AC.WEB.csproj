@@ -16,6 +16,7 @@
     <ProjectReference Include="..\AC.BusinessLogic\AC.BusinessLogic.csproj" />
     <ProjectReference Include="..\AC.Common\AC.Common.csproj" />
     <ProjectReference Include="..\AC.Configuration\AC.Configuration.csproj" />
+    <ProjectReference Include="..\AC.Interfaces\AC.Interfaces.csproj" />
     <ProjectReference Include="..\AC.ViewModels\AC.ViewModels.csproj" />
   </ItemGroup>
 

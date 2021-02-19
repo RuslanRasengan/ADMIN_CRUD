@@ -1,5 +1,111 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Cart";
 }
+
+-<h1>Оформление заказа</h1>
+
+<div class="row-cart">
+    <div class="col-75">
+        <div class="container-cart">
+            <form>
+                <div class="row-cart">
+                    <div class="col-50">
+                        <div class="row">
+                            <div class="col-50">
+                                <input type="text" class="inputText" required />
+                                <span class="floating-label">Имя</span>
+                            </div>
+                            <div class="col-50">
+                                <input type="text" class="inputText" required />
+                                <span class="floating-label">Фамилия</span>
+                            </div>
+                            <div class="col-50">
+                                <input type="text" class="inputText" required />
+                                <span class="floating-label">Город</span>
+                            </div>
+                            <div class="col-50">
+                                <input type="text" class="inputText" required />
+                                <span class="floating-label">Область</span>
+                            </div>
+                            <div class="col-50" style="flex: 100%;">
+                                <input type="text" class="inputText" required />
+                                <span class="floating-label">Адрес</span>
+                            </div>
+                            <div class="col-50">
+                                <input type="text" class="inputText" required />
+                                <span class="floating-label">Email</span>
+                            </div>
+                            <div class="col-50">
+                                <input type="text" class="inputText" required />
+                                <span class="floating-label">Телефон</span>
+                            </div>
+                            <div class="col-50" style="flex: 100%;">
+                                <input type="text" class="inputText" required />
+                                <span class="floating-label">Коментарий</span>
+                            </div>
+                        </div>
+
+                        <div class="payanddelivery">
+                            <div class="dely">
+                                <h3>Выберите способ доставки</h3>
+
+                                <div class="inputGroup">
+                                    <input id="option1" name="radio2" type="radio" />
+                                    <label for="option1">Курьером</label>
+                                </div>
+                                <div class="inputGroup">
+                                    <input id="option2" name="radio2" type="radio" />
+                                    <label for="option2">Транспортная компания CDEK</label>
+                                </div>
+                                <div class="inputGroup">
+                                    <input id="option3" name="radio2" type="radio" />
+                                    <label for="option3">Почтой России</label>
+                                </div>
+
+                            </div>
+
+                            <div class="payd">
+                                <h3>Выберите способ оплаты</h3>
+                                <div class="inputGroup">
+                                    <input id="radio1" name="radio" type="radio" />
+                                    <label for="radio1">Наличными курьеру</label>
+                                </div>
+                                <div class="inputGroup">
+                                    <input id="radio2" name="radio" type="radio" />
+                                    <label for="radio2">Оплата онлайн на сайте</label>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <input type="submit" value="Оформить заказ" class="btn-cart">
+            </form>
+        </div>
+    </div>
+    <div class="col-25">
+        <div class="container-cart">
+            <h4>Корзина <span class="price-cart-cart" style="color:black; margin: 10px"><i class="fa fa-shopping-cart"></i> <b>2</b></span></h4>
+            <div class="product-wrap" style="margin-top: 15px;">
+                <img class="cart-src" src="~/images/products/product-123-123-123.jpg">
+                <p class="item-name-cart">Кроссовки Adidas Yeezy Boost 350 V2 Black (Reflective Laces)</p>
+                <p class="item-price-cart"><strong>10990₽</strong></p>
+                <span class="number-of-items">Кол-во: <b>1</b></span>
+                <span class="choosen-item-size">Размер: <b>42</b></span>
+            </div>
+
+            <div class="product-wrap" style="margin-top: 15px;">
+                <img class="cart-src" src="~/images/products/product-123-123-123.jpg">
+                <p class="item-name-cart">Кроссовки Adidas Yeezy Boost 350 V2 Black (Reflective Laces)</p>
+                <p class="item-price-cart"><strong>10990₽</strong></p>
+                <span class="number-of-items">Кол-во: <b>1</b></span>
+                <span class="choosen-item-size">Размер: <b>42</b></span>
+            </div>
+            <hr>
+            <p>Всего <span class="price-cart" style="color:black"><b>21980₽</b></span></p>
+        </div>
+    </div>
+</div>

@@ -6,10 +6,8 @@ namespace AC.Entities.Enums
     {
         None = 0,
         [Description("Толстовка")]
-        Reflective = 1,
+        Hoodie = 1,
         [Description("Футболка")]
-        ReflectiveLaces = 2,
-        [Description("Худи")]
-        ReflectiveStripe = 3
+        TShirt = 2,
     }
 }

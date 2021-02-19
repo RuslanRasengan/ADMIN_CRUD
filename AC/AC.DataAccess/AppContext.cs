@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using AC.Entities;
 using AC.Entities.Enums;
+using AC.Entities;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 
 namespace AC.DataAccess
@@ -14,6 +13,7 @@ namespace AC.DataAccess
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderItem> OrderItems { get; set; }
+        public virtual DbSet<Client> Clients { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,10 +32,14 @@ namespace AC.DataAccess
             {
                 p.Property(i => i.Type)
                     .HasConversion<string>();
-                //p.Property(i => i.Type)
-                //    .HasConversion(
-                //        v => v.ToString(),
-                //        v => (ProductType)Enum.Parse(typeof(ProductType), v));
+            });
+
+            modelBuilder.Entity<Client>(p =>
+            {
+                p.Property(i => i.DeliveryType)
+                    .HasConversion<string>();
+                p.Property(i => i.PaymentType)
+                    .HasConversion<string>();
             });
         }
     }

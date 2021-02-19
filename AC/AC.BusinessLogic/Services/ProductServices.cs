@@ -81,65 +81,46 @@ namespace AC.BusinessLogic.Services
         {
             var products = new List<Product>
             {
-                this.CreateProduct(),
+                this.CreateProduct(true),//1
+                this.CreateProduct(true),
+                this.CreateProduct(true),
+                this.CreateProduct(true),
+                this.CreateProduct(true),
+                this.CreateProduct(true),
+                this.CreateProduct(true),
+                this.CreateProduct(true),//8
+                this.CreateProduct(false),//1
+                this.CreateProduct(false),
+                this.CreateProduct(false),
+                this.CreateProduct(false),
+                this.CreateProduct(false),
+                this.CreateProduct(false),
+                this.CreateProduct(false),
+                this.CreateProduct(false),//8
 
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
-                this.CreateProduct(),
             };
 
             _productRepository.AddRangeAsync(products).GetAwaiter().GetResult();
         }
 
-        private Product CreateProduct()
+        private Product CreateProduct(bool isMain)
         {
             var image = new Image
             {
                 Name = "product-123-123-123.jpg",
+                Order = 0
             };
+
             return new Product
             {
-                Name = "Толстовка 350 V2 Black",
-                Price = 11999,
-                OldPrice = 5000,
-                Images = new List<Image> { image}
+                Name = "Черная толстовка 350 V2 Black (Тип толстовка)",
+                OldPrice = 25999M,
+                Price = 11999M,
+                Description = "Sime descr",
+                OnMainPage = isMain,
+                Images = new List<Image> { image },
+                Type = Entities.Enums.ProductType.Hoodie,
+                VendorCode = "Vendor code"
             };
         }
     }
